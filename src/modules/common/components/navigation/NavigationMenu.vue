@@ -28,6 +28,24 @@ const menu: MenuItem[] = [
         ],
       },
       { label: 'Reportes', href: '#' },
+      {
+        label: 'Configuración',
+        href: '#',
+        children: [
+          { label: 'Parámetros', href: '#', icon: 'pi pi-cog' },
+          { label: 'Automatización', href: '#', icon: 'pi pi-cog' },
+          { label: 'Alertas', href: '#', icon: 'pi pi-cog' },
+          {
+            label: 'Roles',
+            href: '#',
+            icon: 'pi pi-cog',
+            children: [
+              { label: 'Crear Rol', href: '#', icon: 'pi pi-plus' },
+              { label: 'Editar Rol', href: '#', icon: 'pi pi-pencil' },
+            ],
+          },
+        ],
+      },
     ],
   },
 ];

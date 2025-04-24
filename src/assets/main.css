@@ -2,6 +2,29 @@
 @import 'primeicons/primeicons.css';
 @import '../../fonts/apple/apple-font.css';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .bg-body {
+    @apply bg-white dark:bg-black border-gray-200 dark:border-gray-800;
+  }
+
+  .border-color {
+    @apply border-gray-200 dark:border-gray-800;
+  }
+}
+
+@theme {
+  --color-ac-primary-50: oklch(95% 0.05 232);
+  --color-ac-primary-100: oklch(90% 0.08 232);
+  --color-ac-primary-200: oklch(85% 0.12 232);
+  --color-ac-primary-300: oklch(80% 0.15 232);
+  --color-ac-primary-400: oklch(78% 0.18 232);
+  --color-ac-primary-500: oklch(76.18% 0.205 232);
+  --color-ac-primary-600: oklch(65% 0.205 232);
+  --color-ac-primary-700: oklch(55% 0.18 232);
+  --color-ac-primary-800: oklch(45% 0.15 232);
+}
 body {
   font-family: 'Apple';
 }

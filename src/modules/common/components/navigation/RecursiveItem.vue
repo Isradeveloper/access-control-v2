@@ -43,9 +43,9 @@ const props = defineProps<{ item: MenuItem }>();
 
 const baseClass = computed(() =>
   props.item.children
-    ? 'text-sm text-gray-600 hover:bg-gray-100 hover:text-sky-900 rounded-md px-2 py-1'
+    ? 'text-sm text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-sky-900 dark:hover:text-sky-100 rounded-md px-2 py-1'
     : props.item.href
-      ? 'text-sm text-gray-600 hover:bg-gray-100 hover:text-sky-900 rounded-md px-2 py-1'
+      ? 'text-sm text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-sky-900 dark:hover:text-sky-100 rounded-md px-2 py-1'
       : '',
 );
 
