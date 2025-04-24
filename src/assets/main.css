@@ -1,1 +1,7 @@
 @import 'tailwindcss';
+@import 'primeicons/primeicons.css';
+@import '../../fonts/apple/apple-font.css';
+
+body {
+  font-family: 'Apple';
+}

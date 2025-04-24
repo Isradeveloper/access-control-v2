@@ -1,0 +1,179 @@
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Black.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-BlackItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Bold.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-BoldItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Heavy.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Heavy.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-HeavyItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-HeavyItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-LightItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Light.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Medium.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Regular.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-MediumItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-RegularItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-RegularItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-SemiboldItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-SemiboldItalic.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Semibold.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-ThinItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Thin.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-Ultralight.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-Ultralight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Apple';
+  src:
+    url('./font/BlinkMacSystemFont-UltralightItalic.woff2') format('woff2'),
+    url('./font/BlinkMacSystemFont-UltralightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
