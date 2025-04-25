@@ -7,41 +7,39 @@ import type { MenuItem } from '@/modules/common/interfaces';
 import NestedMenu from './NestedMenu.vue';
 
 const menu: MenuItem[] = [
-  { label: 'Inicio', href: '#', icon: 'pi pi-home' },
+  { label: 'Inicio', icon: 'pi pi-home', name: 'home' },
   {
     label: 'Procesos',
     children: [
-      { label: 'Monitoreo', href: '#', icon: 'pi pi-eye' },
+      { label: 'Monitoreo', icon: 'pi pi-eye', name: 'monitoreo' },
       {
         label: 'Gestión de Procesos',
         children: [
-          { label: 'Crear Proceso', href: '#', icon: 'pi pi-plus' },
-          { label: 'Editar Proceso', href: '#', icon: 'pi pi-pencil' },
+          { label: 'Crear Proceso', icon: 'pi pi-plus', name: 'crear' },
+          { label: 'Editar Proceso', icon: 'pi pi-pencil' },
           {
             label: 'Configuración Avanzada',
             children: [
-              { label: 'Parámetros', href: '#', icon: 'pi pi-cog' },
-              { label: 'Automatización', href: '#', icon: 'pi pi-cog' },
-              { label: 'Alertas', href: '#', icon: 'pi pi-cog' },
+              { label: 'Parámetros', icon: 'pi pi-cog' },
+              { label: 'Automatización', icon: 'pi pi-cog' },
+              { label: 'Alertas', icon: 'pi pi-cog' },
             ],
           },
         ],
       },
-      { label: 'Reportes', href: '#' },
+      { label: 'Reportes' },
       {
         label: 'Configuración',
-        href: '#',
         children: [
-          { label: 'Parámetros', href: '#', icon: 'pi pi-cog' },
-          { label: 'Automatización', href: '#', icon: 'pi pi-cog' },
-          { label: 'Alertas', href: '#', icon: 'pi pi-cog' },
+          { label: 'Parámetros', icon: 'pi pi-cog' },
+          { label: 'Automatización', icon: 'pi pi-cog' },
+          { label: 'Alertas', icon: 'pi pi-cog' },
           {
             label: 'Roles',
-            href: '#',
             icon: 'pi pi-cog',
             children: [
-              { label: 'Crear Rol', href: '#', icon: 'pi pi-plus' },
-              { label: 'Editar Rol', href: '#', icon: 'pi pi-pencil' },
+              { label: 'Crear Rol', icon: 'pi pi-plus' },
+              { label: 'Editar Rol', icon: 'pi pi-pencil' },
             ],
           },
         ],

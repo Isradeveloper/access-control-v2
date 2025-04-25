@@ -16,6 +16,7 @@ export default defineConfig({
   server: {
     port: 5002,
     open: true,
+    allowedHosts: ['localhost', '127.0.0.1', 'operates-innovations-acknowledge-deviation.trycloudflare.com'],
 
     // proxy: {
     //   '/api': {
