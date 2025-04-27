@@ -9,6 +9,7 @@ import Ripple from 'primevue/ripple';
 import StyleClass from 'primevue/styleclass';
 import { AccessControlTheme } from './assets/theming';
 import Tooltip from 'primevue/tooltip';
+import { VueQueryPlugin } from '@tanstack/vue-query';
 
 const app = createApp(App);
 
@@ -26,4 +27,5 @@ app.use(PrimeVue, {
 app.directive('ripple', Ripple);
 app.directive('styleclass', StyleClass);
 app.directive('tooltip', Tooltip);
+app.use(VueQueryPlugin);
 app.mount('#app');

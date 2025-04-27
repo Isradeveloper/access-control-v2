@@ -3,8 +3,8 @@
     <HeaderComponent class="header" :isSidebarVisible="isSidebarVisible" />
     <SidebarComponent class="nav" v-if="isSidebarVisible" />
     <MobileSidebarComponent class="nav" v-else />
-    <div class="main">
-      <RouterView />
+    <div class="main overflow-auto">
+      <RouterView class="h-auto w-full p-5" />
     </div>
     <div class="footer flex justify-center items-center border-t border-color">
       Isradeveloper - 2025
@@ -50,6 +50,8 @@ onUnmounted(() => {
     'nav main main'
     'nav main main'
     'footer footer footer';
+  height: 100vh;
+  overflow: hidden;
 }
 
 .header {
@@ -66,6 +68,8 @@ onUnmounted(() => {
 
 .main {
   grid-area: main;
+  overflow-y: auto;
+  height: 100%;
 }
 
 @media (max-width: 1024px) {
@@ -79,6 +83,8 @@ onUnmounted(() => {
       'header header header'
       'main main main'
       'footer footer footer';
+    height: 100vh;
+    overflow: hidden;
   }
 }
 </style>
