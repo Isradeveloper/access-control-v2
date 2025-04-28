@@ -1,19 +1,21 @@
 <template>
   <DataTable
-    class="w-full h-full"
+    class="w-full h-full sticky-header-table"
     :value="props.data"
     paginator
     :rows="pageSize"
     :rowsPerPageOptions="[pageSize * 1, pageSize * 2, pageSize * 4, pageSize * 8]"
     @sort="onSort"
     @page="onPage"
+    scrollable
+    scrollHeight="100%"
   >
     <template #empty> No customers found. </template>
     <template #header>
-      <div class="flex flex-col-reverse md:flex-col">
+      <div class="flex flex-col">
         <div class="flex justify-end">
           <div
-            class="flex gap-2 w-full md:w-100 flex-col md:flex-row mt-2 md:mt-0 border-t border-color pt-5 md:pt-0 md:border-none"
+            class="flex gap-2 w-full md:w-100 flex-col md:flex-row mt-2 md:mt-0 border-t border-color pt-2 md:pt-0 md:border-none"
           >
             <InputText
               v-model="filters.search.value"
@@ -23,8 +25,21 @@
             <Button type="button" icon="pi pi-search" label="Buscar" class="w-full md:w-40" />
           </div>
         </div>
-        <Panel header="Filtros adicionales" toggleable class="mt-5">
-          <div class="grid grid-cols-1 md:grid-cols-4 gap-3 py-3">
+        <div class="mt-5">
+          <div class="flex justify-end">
+            <Button
+              type="button"
+              icon="pi pi-filter"
+              :label="showFilters ? 'Ocultar Filtros' : 'Mostrar Filtros'"
+              @click="toggleFilters"
+              class="md:w-auto mb-2 p-button-secondary"
+              :class="{ 'p-button-outlined': !showFilters }"
+            />
+          </div>
+          <div
+            v-if="showFilters"
+            class="grid grid-cols-1 md:grid-cols-4 gap-3 py-2 border-t border-neutral-200 pt-2"
+          >
             <SelectComponent
               id="country"
               v-model="selectedCountry"
@@ -35,7 +50,7 @@
               class="w-full"
             />
           </div>
-        </Panel>
+        </div>
       </div>
     </template>
 
@@ -59,7 +74,7 @@
       </template>
       <template #body="">
         <div
-          class="items-center w-[100px] md:w-[150px] justify-center grid grid-cols-2 md:grid-cols-3 place-items-center gap-x-5 gap-y-2"
+          class="flex items-center w-[100px] md:w-[150px] justify-center gap-x-5 gap-y-2 flex-wrap"
         >
           <slot name="actions"></slot>
         </div>
@@ -75,7 +90,6 @@ import InputText from 'primevue/inputtext';
 import Button from 'primevue/button';
 import { ref } from 'vue';
 import SelectComponent from '@/modules/common/components/SelectComponent.vue';
-import Panel from 'primevue/panel';
 
 const filters = ref({
   search: {
@@ -97,10 +111,10 @@ type Structure = {
   field: string;
 };
 
-interface Props {
+type Props<T = unknown> = {
   structure: Structure[];
-  data: unknown[];
-}
+  data: T[];
+};
 
 const props = defineProps<Props>();
 
@@ -119,11 +133,22 @@ const countries = [
 ];
 
 const pageSize = ref(25);
+const showFilters = ref(false);
+
+const toggleFilters = () => {
+  showFilters.value = !showFilters.value;
+};
 </script>
 
 <style scoped>
-.holaa {
-  background-color: red !important;
+.sticky-header-table :deep(.p-datatable-thead) {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sticky-header-table :deep(.p-datatable-thead > tr > th) {
+  background-color: rgb(var(--neutral-100));
+  border-bottom: 1px solid rgb(var(--neutral-200));
 }
 </style>
-;

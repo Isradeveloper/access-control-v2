@@ -4,7 +4,7 @@
     <SidebarComponent class="nav" v-if="isSidebarVisible" />
     <MobileSidebarComponent class="nav" v-else />
     <div class="main overflow-auto">
-      <RouterView class="h-auto w-full p-5" />
+      <RouterView />
     </div>
     <div class="footer flex justify-center items-center border-t border-color">
       Isradeveloper - 2025

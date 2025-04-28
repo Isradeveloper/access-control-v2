@@ -1,6 +1,6 @@
 import type { PaginatedResponse } from '@/modules/common/interfaces';
 
-interface DuenoProcesoL {
+export interface DuenoProcesoL {
   id: number;
   id_empleado_th: number | null;
   nombre: string;
@@ -17,7 +17,7 @@ interface DuenoProcesoL {
   empresas: number[];
 }
 
-interface ProcesoL {
+export interface ProcesoL {
   id: number;
   nombre: string;
   descripcion: string;
