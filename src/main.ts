@@ -24,8 +24,17 @@ app.use(PrimeVue, {
   },
 });
 
+VueQueryPlugin.install(app, {
+  queryClientConfig: {
+    defaultOptions: {
+      queries: {
+        staleTime: 1 * 60 * 1000,
+      },
+    },
+  },
+});
+
 app.directive('ripple', Ripple);
 app.directive('styleclass', StyleClass);
 app.directive('tooltip', Tooltip);
-app.use(VueQueryPlugin);
 app.mount('#app');

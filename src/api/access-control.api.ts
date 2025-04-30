@@ -5,6 +5,6 @@ export const accessControlApi = axios.create({
   headers: {
     'Content-Type': 'application/json',
     Accept: 'application/json',
-    Authorization: 'token e151255a06b1f9cbeef9e3e942375501221d2248',
+    Authorization: 'token 35549bce126b02891f47bcb24db7b93dedd83b7b',
   },
 });

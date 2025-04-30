@@ -7,6 +7,7 @@
       :options="options"
       filter
       :optionLabel="optionLabel"
+      :optionValue="optionValue"
       :placeholder="placeholder"
       :showClear="true"
       class="w-full"
@@ -25,6 +26,7 @@ const props = defineProps<{
   label: string;
   placeholder: string;
   optionLabel: string;
+  optionValue: string;
 }>();
 
 const emits = defineEmits<{

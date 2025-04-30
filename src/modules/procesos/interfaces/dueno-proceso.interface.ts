@@ -1,6 +1,6 @@
 import type { PaginatedResponse } from '@/modules/common/interfaces';
 
-export interface DuenoProcesoL {
+export interface DuenoProceso {
   id: number;
   id_empleado_th: number | null;
   nombre: string;
@@ -26,4 +26,4 @@ export interface ProcesoL {
   roles: number[];
 }
 
-export type DuenoProcesoListViewset = PaginatedResponse<DuenoProcesoL>;
+export type DuenoProcesoListViewset = PaginatedResponse<DuenoProceso>;

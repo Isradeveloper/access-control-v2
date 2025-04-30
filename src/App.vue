@@ -9,6 +9,7 @@
     <div class="footer flex justify-center items-center border-t border-color">
       Isradeveloper - 2025
     </div>
+    <VueQueryDevtools />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import { onMounted, onUnmounted } from 'vue';
 import { storeToRefs } from 'pinia';
 import { computed } from 'vue';
 import { RouterView } from 'vue-router';
+import { VueQueryDevtools } from '@tanstack/vue-query-devtools';
 
 const commonStore = useCommonStore();
 const { breakpoints } = storeToRefs(commonStore);

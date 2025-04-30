@@ -1,6 +1,18 @@
 <template>
-  <div class="h-50 2xl:h-[90%] w-full">
-    <DataTable :structure="structure" :data="tableData">
+  <div>
+    <DataTablePaginated
+      :structure="structure"
+      :data="duenosProceso"
+      :isLoading="isLoading"
+      :filters="filters"
+      :total="total"
+      :page="page"
+      :pageSize="pageSize"
+      :onSearch="onSearch"
+      :onFilter="onSearch"
+      :onSort="setOrder"
+      @page="setPage($event.page + 1, $event.rows)"
+    >
       <template #actions>
         <Button
           icon="pi pi-pencil"
@@ -15,48 +27,46 @@
           size="small"
         />
       </template>
-    </DataTable>
+    </DataTablePaginated>
   </div>
 </template>
 
 <script setup lang="ts">
-import DataTable from '@/modules/common/components/tables/django-rest-framework/Datatable/DataTable.vue';
-import useDuenosProcesoStore from '@/modules/procesos/stores/duenos-proceso.store';
-import { storeToRefs } from 'pinia';
-import { onMounted, ref, computed } from 'vue';
+import DataTablePaginated from '@/modules/common/components/tables/django-rest-framework/DataTablePaginated.vue';
 import { Button } from 'primevue';
+import { useDuenoProceso } from '../composables/useDuenoProceso';
 
-const duenosProcesoStore = useDuenosProcesoStore();
-const { duenosProceso } = storeToRefs(duenosProcesoStore);
+const {
+  duenosProceso,
+  isLoading,
+  total,
+  page,
+  pageSize,
+  setPage,
+  structure,
+  filters,
+  setFiltersParams,
+  setOrder,
+} = useDuenoProceso();
 
-const tableData = computed(() => duenosProceso.value?.data.results || []);
+const onSearch = () => {
+  setFiltersParams();
+};
 
-onMounted(async () => {
-  await duenosProcesoStore.getDuenosProcesos();
-});
-
-const structure = ref([
-  {
-    field: 'nombre',
-    header: 'Nombre',
-  },
-  {
-    field: 'nombre',
-    header: 'Nombre',
-  },
-  {
-    field: 'cargo',
-    header: 'Cargo',
-  },
-  {
-    field: 'area',
-    header: 'Area',
-  },
-]);
-
-onMounted(async () => {
-  await duenosProcesoStore.getDuenosProcesos();
-});
+// const aditionalFilters: AdditionalFilters[] = [
+//   {
+//     id: 'abc',
+//     label: 'ABC',
+//     optionLabel: 'label',
+//     optionValue: 'value',
+//     placeholder: 'Seleccione un abc',
+//     data: [
+//       { value: '1', label: 'abc' },
+//       { value: '2', label: 'def' },
+//       { value: '3', label: 'ghi' },
+//     ],
+//   },
+// ];
 </script>
 
 <style scoped>
