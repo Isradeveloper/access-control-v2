@@ -52,12 +52,6 @@ export const useDuenoProceso = () => {
     }
   });
 
-  watch(error, () => {
-    if (error.value) {
-      console.log(error.value);
-    }
-  });
-
   return {
     duenosProceso,
     total,

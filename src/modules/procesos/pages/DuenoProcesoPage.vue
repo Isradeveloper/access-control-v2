@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="!error">
     <DataTablePaginated
       :structure="structure"
       :data="duenosProceso"
@@ -29,29 +29,38 @@
       </template>
     </DataTablePaginated>
   </div>
+  <div v-else>
+    <p>{{ error }}</p>
+  </div>
 </template>
 
 <script setup lang="ts">
 import DataTablePaginated from '@/modules/common/components/tables/django-rest-framework/DataTablePaginated.vue';
 import { Button } from 'primevue';
 import { useDuenoProceso } from '../composables/useDuenoProceso';
+import { watch } from 'vue';
 
 const {
   duenosProceso,
+  structure,
   isLoading,
   total,
   page,
   pageSize,
   setPage,
-  structure,
   filters,
   setFiltersParams,
   setOrder,
+  error,
 } = useDuenoProceso();
 
 const onSearch = () => {
   setFiltersParams();
 };
+
+watch(error, () => {
+  console.log(error);
+});
 
 // const aditionalFilters: AdditionalFilters[] = [
 //   {
